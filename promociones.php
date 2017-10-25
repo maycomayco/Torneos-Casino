@@ -3,7 +3,7 @@
 Plugin Name: Promociones - KNX
 Text Domain: knx-promociones
 Plugin URI: http://kinexo.com
-Description: Administrar promociones nunca fue tan sencillo!
+Description: Administrar promociones nunca fue tan sencillo! Contiene soporte para Visual Composer. Requiere del plugin CMB2 https://es.wordpress.org/plugins/cmb2/
 Version: 0.2
 Author: Mayco
 Author URI: https://www.linkedin.com/in/mayco-barale-2563815a/
