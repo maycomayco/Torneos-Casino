@@ -4,29 +4,23 @@ Plugin Name: Promociones - KNX
 Text Domain: knx-promociones
 Plugin URI: http://kinexo.com
 Description: Administrar promociones nunca fue tan sencillo! Contiene soporte para Visual Composer. Requiere del plugin CMB2 https://es.wordpress.org/plugins/cmb2/
-Version: 0.2
+Version: 0.5
 Author: Mayco
 Author URI: https://www.linkedin.com/in/mayco-barale-2563815a/
 License: GPLv2 o posterior
 */
 
-/**
- * Get the bootstrap! If using the plugin from wordpress.org, REMOVE THIS!
- */
+/** Get the bootstrap! If using the plugin from wordpress.org, REMOVE THIS! */
 if ( file_exists( dirname( __FILE__ ) . '/cmb2/init.php' ) ) {
 	require_once dirname( __FILE__ ) . '/cmb2/init.php';
 } elseif ( file_exists( dirname( __FILE__ ) . '/CMB2/init.php' ) ) {
 	require_once dirname( __FILE__ ) . '/CMB2/init.php';
 }
 
-/*
-	Registro Custom Post
-*/
-
+/*	Registro Custom Post */
 if ( ! function_exists('knx_promociones') ) {
 	// Register Custom Post Type
 	function knx_promociones() {
-
 		$labels = array(
 			'name'                  => _x( 'Promociones', 'Post Type General Name', 'knx-promociones' ),
 			'singular_name'         => _x( 'Promocion', 'Post Type Singular Name', 'knx-promociones' ),
@@ -119,9 +113,6 @@ function promocion_register_demo_metabox() {
 	Registramos modulo a Visual Composer
 */
 if( function_exists( 'vc_manager' ) ) {
-	// require_once( plugin_dir_path( __FILE__ ) . 'templates/custom-templates.php' );
-	// require_once( plugin_dir_path( __FILE__ ) . 'promocion-shortcode.php' );
-
 	// Before VC Init
 	add_action( 'vc_before_init', 'knx_promociones' );
 	function knx_promociones() {
